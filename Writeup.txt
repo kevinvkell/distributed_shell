@@ -1,0 +1,13 @@
+To test setup/tear-down time, I made a modified version of my client.
+It is identical to the normal client except it only sets up the connection, authenticates, and exits.
+This way, I can externally measure the time it takes to run only that portion of the client's tasks by running the test_client executable repeatedly in a shell script.
+Since the other functionality has been removed, the time it takes to run the modified client should be very close to the actual setup/break-down time. 
+I ran it ten times measuring the nanoseconds it took to complete. I took an average after all the runs.
+
+To test throughput, I used the normal, unaltered client executable.
+First, I use the client to execute a /dev/zero command that builds a file that is exactly 1MB on the server consisting of all null characters. 
+Then, I run the cat command through the client ten times to get data on how long it takes to bring that data over from server to client.
+Once complete, I take an average of the times and compute the throughput.
+This method may not be the most accurate because it also includes the time it takes to authenticate. 
+This can be offset by subtracting the setup/tear-down times gained in the first experiment from the times in this experiment.
+This is not the best solution, but it provides a decent estimate. 

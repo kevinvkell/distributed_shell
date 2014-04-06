@@ -1,0 +1,34 @@
+****BEGINNING TEST****
+
+
+individual run times setup/tear-down (ns)
+6687000
+6291000
+6535000
+6250000
+7637000
+7499000
+6182000
+5871000
+5735000
+6923000
+ 
+average setup/tear-down (ns): 6561000
+average setup/tear-down (ms): 6
+ 
+individual run times cat of 1MB file (ns)
+16908000
+10868000
+9499000
+9547000
+9817000
+9546000
+9310000
+9743000
+9479000
+14030000
+ 
+average cat 1MB file (ns): 10874700
+average cat 1MB file (ms): 10
+average throughput (MB/s):
+91.9000000000
